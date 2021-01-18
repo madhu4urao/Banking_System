@@ -1,16 +1,28 @@
-# This is a sample Python script.
+class Animal:
+    def __init__(self):
+        print("Animal Created")
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    def whoAmI(self):
+        print("Animal")
+
+    def eat(self):
+        print("Eating")
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+class Dog(Animal):
+
+    def __init__(self):
+        super().__init__()
+        print("Dog created")
+
+    def whoAmI(self):
+        print("Dog")
+
+    def bark(self):
+        print("Woof!")
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+d = Dog()
+d.whoAmI()
+d.eat()
+d.bark()
